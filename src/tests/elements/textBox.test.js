@@ -23,14 +23,12 @@ test('should display all the "Text Box" page elements',  async ({ page }) => {
     await expect(textBoxPage.submitButton).toBeVisible();
 });
 
-test('should successfully fill in the text box page form', async ({ page }) => {
+test('should show output after successfully fill in the text box page form', async ({ page }) => {
     const textBoxPage = new TextBoxPage(page);
+    const outputString = `Name: ${textBoxPage.fullName}Email: ${textBoxPage.email}Current Address: ${textBoxPage.currentAddress}Permanent Address: ${textBoxPage.permanentAddress}`
     await textBoxPage.navigate();
     await expect(page).toHaveURL(textBoxPageURL);
     await textBoxPage.fillInTheFormAndSubmit();
     await expect(textBoxPage.outputDiv).toBeVisible()
-    await expect(textBoxPage.outputDiv).toContainText(`Name:${textBoxPage.fullName}`)
-    await expect(textBoxPage.outputDiv).toContainText(`Email:${textBoxPage.email}`)
-    await expect(textBoxPage.outputDiv).toContainText(`Current Address:${textBoxPage.currentAddress}`)
-    await expect(textBoxPage.outputDiv).toContainText(`Permanent Address:${textBoxPage.permanentAddress}`)
+    await expect(textBoxPage.outputDiv).toContainText(outputString)
 });
