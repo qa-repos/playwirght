@@ -30,5 +30,5 @@ test('should show output after successfully fill in the text box page form', asy
     await expect(page).toHaveURL(textBoxPageURL);
     await textBoxPage.fillInTheFormAndSubmit();
     await expect(textBoxPage.outputDiv).toBeVisible()
-    await expect(textBoxPage.outputDiv).toContainText(outputString)
+    await expect.soft(textBoxPage.outputDiv).toContainText(outputString)
 });
