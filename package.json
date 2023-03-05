@@ -1,0 +1,25 @@
+{
+  "name": "playwirght",
+  "version": "1.0.0",
+  "description": "test automation playwright framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:debug":"npx playwright test --debug",
+    "test:codegen": "npx playwright codegen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qa-repos/playwirght.git"
+  },
+  "author": "Pokhilenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qa-repos/playwirght/issues"
+  },
+  "homepage": "https://github.com/qa-repos/playwirght#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.31.2",
+    "playwright": "^1.31.2"
+  }
+}
