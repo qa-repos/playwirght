@@ -1,16 +1,14 @@
 import config from '../utils/config';
-import textBoxData from "../utils/fixtures/textBox.json";
-
-const textBoxPageUrl = `${config.baseUrl}/text-box`
+import textBoxData from '../utils/fixtures/textBox.json';
 
 exports.TextBoxPage = class TextBoxPage {
-
     /**
      * @param {import('@playwright/test').Page} page
      */
     constructor(page) {
         // form data fixture
         this.page = page;
+        this.url = `${config.baseUrl}/text-box`
 
         // locators
         this.fullNameLabel = page.locator('#userName-label');
@@ -44,7 +42,7 @@ exports.TextBoxPage = class TextBoxPage {
     }
 
     async navigate() {
-        await this.page.goto(textBoxPageUrl);
+        await this.page.goto(this.url);
     }
 
     async fillInTheFormAndSubmit() {

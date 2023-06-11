@@ -1,0 +1,31 @@
+{
+  "home": {
+    "title": "Home",
+    "desktop": {
+      "title": "Desktop",
+      "notes": "Notes",
+      "commands": "Commands"
+    },
+    "documents": {
+      "title": "Documents",
+      "workspace": {
+        "title": "WorkSpace",
+        "react": "React",
+        "angular": "Angular",
+        "vue": "Vue"
+      },
+      "office": {
+        "title": "Office",
+        "public": "Public",
+        "private": "private",
+        "classified": "classified",
+        "general": "general"
+      }
+    },
+    "downloads": {
+      "title": "Downloads",
+      "word": "Word File.doc",
+      "excel": "Excel File.xls"
+    }
+  }
+}
